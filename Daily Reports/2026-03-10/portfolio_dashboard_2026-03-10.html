@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Murdoch Capital - Dashboard 2026-03-10</title>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Segoe UI',Arial,sans-serif; background:#eef2f7; color:#1a1a2e; font-size:13px; }
+.header { background:linear-gradient(135deg,#0d2b55,#1b3a6b 60%,#2e6ba8); color:white; padding:28px 40px; }
+.header h1 { font-size:26px; font-weight:800; letter-spacing:1px; }
+.header p { font-size:13px; opacity:.75; margin-top:5px; }
+.meta { background:#1b3a6b; color:#a8c4e0; font-size:12px; padding:7px 40px; display:flex; gap:24px; flex-wrap:wrap; }
+.container { max-width:1700px; margin:0 auto; padding:20px 40px; }
+h2 { font-size:17px; color:#0d2b55; margin:28px 0 10px; padding-bottom:7px; border-bottom:3px solid #2e6ba8; }
+.kpi-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:12px 0 20px; }
+.kpi { background:white; border-radius:8px; padding:16px 20px; box-shadow:0 2px 8px rgba(0,0,0,.07); border-left:4px solid #2e6ba8; }
+.kpi-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:.5px; }
+.kpi-value { font-size:22px; font-weight:800; margin-top:3px; }
+.kpi-sub { font-size:11px; color:#999; margin-top:3px; }
+.card { background:white; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.07); margin:12px 0; overflow:hidden; }
+.card-inner { padding:16px 20px; }
+.tw { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; white-space:nowrap; }
+th { background:#0d2b55; color:white; padding:8px 10px; font-size:11px; text-align:left; position:sticky; top:0; }
+td { padding:7px 10px; font-size:12px; border-bottom:1px solid #e8edf2; vertical-align:top; }
+tr:hover td { background:#f5f8ff; }
+.alert { background:#fff3cd; border-left:4px solid #e8a020; padding:10px 14px; border-radius:4px; margin:6px 0; }
+.alert-ok { background:#d4edda; border-left:4px solid #1a7a4a; padding:10px 14px; border-radius:4px; margin:6px 0; color:#1a7a4a; font-weight:600; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.footer { background:#0d2b55; color:#a8c4e0; text-align:center; font-size:11px; padding:16px; margin-top:30px; }
+code { background:#f0f4f8; padding:2px 6px; border-radius:3px; font-size:11px; }
+</style></head><body>
+
+<div class="header">
+  <h1>MURDOCH CAPITAL - INVESTOR DASHBOARD</h1>
+  <p>£5,000 Moderate Risk Portfolio &nbsp;|&nbsp; 10-Year Horizon (2026-2036) &nbsp;|&nbsp; 2026-03-10</p>
+</div>
+<div class="meta">
+  <span>Generated: 2026-03-10 11:19 UTC</span>
+  <span>Data Source: YAHOO</span>
+  <span>Held: 17 positions</span>
+  <span>Watchlist: 10 names</span>
+  <span>Backtest: 2025-03-03 to 2026-03-10</span>
+  <span style="color:#f0c040">NOT FINANCIAL ADVICE</span>
+</div>
+
+<div class="container">
+
+<h2>Portfolio Performance</h2>
+<div class="kpi-grid"><div class="kpi"><div class="kpi-label">Portfolio Value</div><div class="kpi-value" style="color:#0d2b55">£7,511.10</div><div class="kpi-sub">Started £5,000</div></div><div class="kpi"><div class="kpi-label">Total Return</div><div class="kpi-value" style="color:#1a7a4a">+50.22%</div><div class="kpi-sub">2025-03-03 to 2026-03-10</div></div><div class="kpi"><div class="kpi-label">vs S&P 500 Alpha</div><div class="kpi-value" style="color:#1a7a4a">+32.67%</div><div class="kpi-sub">S&P returned 17.55%</div></div><div class="kpi"><div class="kpi-label">Gain / Loss</div><div class="kpi-value" style="color:#1a7a4a">+£2,511.10</div><div class="kpi-sub">Simulated P&L</div></div><div class="kpi"><div class="kpi-label">Sharpe Ratio</div><div class="kpi-value" style="color:#0d2b55">1.895</div><div class="kpi-sub">Risk-adjusted return (>1 = good)</div></div><div class="kpi"><div class="kpi-label">Sortino Ratio</div><div class="kpi-value" style="color:#0d2b55">3.264</div><div class="kpi-sub">Downside risk-adjusted return</div></div><div class="kpi"><div class="kpi-label">Max Drawdown</div><div class="kpi-value" style="color:#a31515">-12.83%</div><div class="kpi-sub">Worst peak-to-trough loss</div></div><div class="kpi"><div class="kpi-label">Annualised Vol</div><div class="kpi-value" style="color:#0d2b55">22.85%</div><div class="kpi-sub">Annualised std deviation</div></div></div>
+
+<h2>Action Alerts</h2>
+<div class="card"><div class="card-inner"><div class="alert"><strong>TSM</strong> (TSMC ADR) - <span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span> - HELD: action required</div><div class="alert"><strong>AMD</strong> (Advanced Micro Devices) - <span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span> - HELD: action required</div><div class="alert"><strong>PLTR</strong> (Palantir Technologies) - <span style="background:#e8a020;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">REDUCE</span> - HELD: action required</div><div class="alert"><strong>ISRG</strong> (Intuitive Surgical) - <span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span> - WATCHLIST: review for entry</div><div class="alert"><strong>AVGO</strong> (Broadcom Inc) - <span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span> - WATCHLIST: review for entry</div><div class="alert"><strong>ALAB</strong> (Astera Labs Inc) - <span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span> - WATCHLIST: review for entry</div></div></div>
+
+<div class="grid2">
+  <div>
+    <h2>Sector Allocation</h2>
+    <div class="card"><div class="tw"><table>
+      <thead><tr><th>Sector</th><th>%</th><th>Capital</th><th>Weight</th></tr></thead>
+      <tbody><tr><td>Technology</td><td style="font-weight:bold">37%</td><td>£1,850</td><td><div style="background:#2e6ba8;height:10px;width:185px;border-radius:2px"></div></td></tr><tr><td>Fixed Income</td><td style="font-weight:bold">15%</td><td>£750</td><td><div style="background:#2e6ba8;height:10px;width:75px;border-radius:2px"></div></td></tr><tr><td>Commodities</td><td style="font-weight:bold">10%</td><td>£500</td><td><div style="background:#2e6ba8;height:10px;width:50px;border-radius:2px"></div></td></tr><tr><td>Consumer</td><td style="font-weight:bold">6%</td><td>£300</td><td><div style="background:#2e6ba8;height:10px;width:30px;border-radius:2px"></div></td></tr><tr><td>Healthcare</td><td style="font-weight:bold">6%</td><td>£300</td><td><div style="background:#2e6ba8;height:10px;width:30px;border-radius:2px"></div></td></tr><tr><td>Utilities</td><td style="font-weight:bold">6%</td><td>£300</td><td><div style="background:#2e6ba8;height:10px;width:30px;border-radius:2px"></div></td></tr><tr><td>Industrials</td><td style="font-weight:bold">6%</td><td>£300</td><td><div style="background:#2e6ba8;height:10px;width:30px;border-radius:2px"></div></td></tr><tr><td>Energy</td><td style="font-weight:bold">4%</td><td>£200</td><td><div style="background:#2e6ba8;height:10px;width:20px;border-radius:2px"></div></td></tr></tbody>
+    </table></div></div>
+  </div>
+  <div>
+    <h2>Monthly Simulated Performance</h2>
+    <div class="card"><div class="tw"><table>
+      <thead><tr><th>Month</th><th>Value</th><th>Change</th><th>Return</th></tr></thead>
+      <tbody><tr><td>2025-03</td><td style="font-weight:bold">£4,408.49</td><td style="color:#a31515">-£91.51</td><td style="color:#a31515">-2.03%</td></tr><tr><td>2025-04</td><td style="font-weight:bold">£4,605.27</td><td style="color:#1a7a4a">+£196.78</td><td style="color:#1a7a4a">+4.46%</td></tr><tr><td>2025-05</td><td style="font-weight:bold">£5,053.32</td><td style="color:#1a7a4a">+£448.05</td><td style="color:#1a7a4a">+9.73%</td></tr><tr><td>2025-06</td><td style="font-weight:bold">£5,361.13</td><td style="color:#1a7a4a">+£307.81</td><td style="color:#1a7a4a">+6.09%</td></tr><tr><td>2025-07</td><td style="font-weight:bold">£5,476.32</td><td style="color:#1a7a4a">+£115.19</td><td style="color:#1a7a4a">+2.15%</td></tr><tr><td>2025-08</td><td style="font-weight:bold">£5,530.02</td><td style="color:#1a7a4a">+£53.70</td><td style="color:#1a7a4a">+0.98%</td></tr><tr><td>2025-09</td><td style="font-weight:bold">£6,230.51</td><td style="color:#1a7a4a">+£700.49</td><td style="color:#1a7a4a">+12.67%</td></tr><tr><td>2025-10</td><td style="font-weight:bold">£6,810.92</td><td style="color:#1a7a4a">+£580.41</td><td style="color:#1a7a4a">+9.32%</td></tr><tr><td>2025-11</td><td style="font-weight:bold">£6,639.34</td><td style="color:#a31515">-£171.58</td><td style="color:#a31515">-2.52%</td></tr><tr><td>2025-12</td><td style="font-weight:bold">£6,693.29</td><td style="color:#1a7a4a">+£53.95</td><td style="color:#1a7a4a">+0.81%</td></tr><tr><td>2026-01</td><td style="font-weight:bold">£7,185.12</td><td style="color:#1a7a4a">+£491.83</td><td style="color:#1a7a4a">+7.35%</td></tr><tr><td>2026-02</td><td style="font-weight:bold">£7,186.69</td><td style="color:#1a7a4a">+£1.57</td><td style="color:#1a7a4a">+0.02%</td></tr><tr><td>2026-03</td><td style="font-weight:bold">£7,011.12</td><td style="color:#a31515">-£175.57</td><td style="color:#a31515">-2.44%</td></tr></tbody>
+    </table></div></div>
+  </div>
+</div>
+
+<h2>Portfolio Holdings - Full Analysis</h2>
+<p style="color:#888;margin-bottom:8px;font-size:11px">12-month simulated returns based on historical price data. Target allocations at inception (£5,000).</p>
+<div class="card"><div class="tw"><table>
+  <thead><tr><th>Ticker</th><th>Sleeve</th><th>Price</th><th>Day</th>
+            <th>1W</th><th>1M</th><th>3M</th><th>1Y Sim</th>
+            <th>RSI</th><th>Trend</th>
+            <th>Alloc</th><th>Sim Value</th><th>Gain/Loss</th>
+            <th>Vol</th><th>Sharpe</th><th>Sortino</th><th>Max DD</th><th>Beta</th><th>Win%</th>
+            <th>Mkt Cap</th><th>Fwd P/E</th><th>Rev Grth</th><th>Gross Mgn</th>
+            <th>Analyst</th><th>Upside</th><th>Next Earn</th>
+            <th>Signal</th><th>Key Drivers</th></tr></thead>
+  <tbody><tr>
+          <td><strong style="color:#0d2b55">ASML</strong><br>
+            <span style="font-size:10px;color:#aaa">ASML Holding NV</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">EUV Lithography Monopoly</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$1357.42</td>
+          <td style="color:#1a7a4a;font-weight:bold">+5.00%</td>
+          <td style="color:#a31515">-4.6%</td>
+          <td style="color:#1a7a4a">+0.7%</td>
+          <td style="color:#1a7a4a">+22.4%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+95.7%</td>
+          <td style="font-weight:bold;color:#555">43.8</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>£350</td>
+          <td style="color:#1a7a4a">£684.79</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£334.79</td>
+          <td>41.2%</td>
+          <td style="color:#1a7a4a">1.51</td>
+          <td>2.75</td>
+          <td style="color:#a31515">-23.4%</td>
+          <td>1.49</td>
+          <td>56.6%</td>
+          <td style="font-size:11px">$533.0B</td>
+          <td>31.5x</td>
+          <td style="color:#1a7a4a">+5%</td>
+          <td>53%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+8.8%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-15</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Above SMA50 and SMA200 - strong uptrend<br>• Consensus: STRONG BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">MSFT</strong><br>
+            <span style="font-size:10px;color:#aaa">Microsoft Corporation</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Enterprise AI / Cloud (Azure)</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$409.41</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.11%</td>
+          <td style="color:#1a7a4a">+2.7%</td>
+          <td style="color:#1a7a4a">+4.2%</td>
+          <td style="color:#a31515">-14.7%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+6.2%</td>
+          <td style="font-weight:bold;color:#555">60.6</td>
+          <td><span style="color:#a31515;font-weight:700">Downtrend</span></td>
+          <td>£350</td>
+          <td style="color:#1a7a4a">£371.67</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£21.67</td>
+          <td>25.9%</td>
+          <td style="color:#a31515">-0.02</td>
+          <td>-0.19</td>
+          <td style="color:#a31515">-28.8%</td>
+          <td>0.87</td>
+          <td>53.6%</td>
+          <td style="font-size:11px">$3.04T</td>
+          <td>21.7x</td>
+          <td style="color:#1a7a4a">+17%</td>
+          <td>69%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+45.2%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-29</span></td>
+          <td><span style="background:#555555;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">HOLD</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Below both SMAs - downtrend in force<br>• Consensus: STRONG BUY<br>• Analyst target +45% upside</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">GOOG</strong><br>
+            <span style="font-size:10px;color:#aaa">Alphabet Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">AI Search / DeepMind / GCP</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$306.01</td>
+          <td style="color:#1a7a4a;font-weight:bold">+2.66%</td>
+          <td style="color:#a31515">-0.0%</td>
+          <td style="color:#a31515">-7.6%</td>
+          <td style="color:#a31515">-3.8%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+82.3%</td>
+          <td style="font-weight:bold;color:#555">53.4</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>£300</td>
+          <td style="color:#1a7a4a">£546.81</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£246.81</td>
+          <td>31.0%</td>
+          <td style="color:#1a7a4a">1.25</td>
+          <td>2.15</td>
+          <td style="color:#a31515">-29.4%</td>
+          <td>0.98</td>
+          <td>51.8%</td>
+          <td style="font-size:11px">$3.70T</td>
+          <td>22.8x</td>
+          <td style="color:#1a7a4a">+18%</td>
+          <td>60%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+17.5%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-23</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect<br>• Consensus: STRONG BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">TSM</strong><br>
+            <span style="font-size:10px;color:#aaa">TSMC ADR</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Advanced Semiconductor Mfg</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$348.70</td>
+          <td style="color:#1a7a4a;font-weight:bold">+2.89%</td>
+          <td style="color:#a31515">-5.5%</td>
+          <td style="color:#1a7a4a">+5.4%</td>
+          <td style="color:#1a7a4a">+19.4%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+104.3%</td>
+          <td style="font-weight:bold;color:#555">42.2</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>£300</td>
+          <td style="color:#1a7a4a">£612.94</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£312.94</td>
+          <td>38.2%</td>
+          <td style="color:#1a7a4a">1.45</td>
+          <td>2.68</td>
+          <td style="color:#a31515">-32.6%</td>
+          <td>1.45</td>
+          <td>52.9%</td>
+          <td style="font-size:11px">$1.81T</td>
+          <td>19.4x</td>
+          <td style="color:#1a7a4a">+20%</td>
+          <td>60%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+20.9%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-16</span></td>
+          <td><span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Above SMA50 and SMA200 - strong uptrend<br>• Revenue growth 20% YoY - strong<br>• Consensus: STRONG BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">TSLA</strong><br>
+            <span style="font-size:10px;color:#aaa">Tesla Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Autonomy / Optimus Robotics / Energy</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$398.68</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.49%</td>
+          <td style="color:#a31515">-1.1%</td>
+          <td style="color:#1a7a4a">+0.4%</td>
+          <td style="color:#a31515">-12.3%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+40.1%</td>
+          <td style="font-weight:bold;color:#555">42.7</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>£300</td>
+          <td style="color:#1a7a4a">£420.18</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£120.18</td>
+          <td>60.3%</td>
+          <td style="color:#555">0.29</td>
+          <td>-0.02</td>
+          <td style="color:#a31515">-43.4%</td>
+          <td>2.17</td>
+          <td>50.7%</td>
+          <td style="font-size:11px">$1.50T</td>
+          <td>141.9x</td>
+          <td style="color:#a31515">-3%</td>
+          <td>18%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+5.8%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-21</span></td>
+          <td><span style="background:#555555;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">HOLD</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect<br>• Forward P/E elevated (141.9x)<br>• Revenue declining -3% YoY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">LLY</strong><br>
+            <span style="font-size:10px;color:#aaa">Eli Lilly & Co</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">GLP-1 Drugs / AI Drug Discovery</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$1008.39</td>
+          <td style="color:#1a7a4a;font-weight:bold">+1.82%</td>
+          <td style="color:#a31515">-0.9%</td>
+          <td style="color:#a31515">-1.1%</td>
+          <td style="color:#a31515">-0.4%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+9.3%</td>
+          <td style="font-weight:bold;color:#555">44.3</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>£300</td>
+          <td style="color:#1a7a4a">£327.79</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£27.79</td>
+          <td>41.4%</td>
+          <td style="color:#555">0.61</td>
+          <td>0.59</td>
+          <td style="color:#a31515">-32.6%</td>
+          <td>0.66</td>
+          <td>56.2%</td>
+          <td style="font-size:11px">$902.5B</td>
+          <td>24.0x</td>
+          <td style="color:#1a7a4a">+43%</td>
+          <td>83%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+20.4%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-30</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect<br>• Revenue growth 43% YoY - strong<br>• Consensus: BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">NEE</strong><br>
+            <span style="font-size:10px;color:#aaa">NextEra Energy Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Clean Energy / AI Data Centre Power</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$92.01</td>
+          <td style="color:#1a7a4a;font-weight:bold">+1.09%</td>
+          <td style="color:#a31515">-0.8%</td>
+          <td style="color:#1a7a4a">+3.8%</td>
+          <td style="color:#1a7a4a">+11.1%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+32.3%</td>
+          <td style="font-weight:bold;color:#555">49.8</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>£300</td>
+          <td style="color:#1a7a4a">£396.87</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£96.87</td>
+          <td>26.3%</td>
+          <td style="color:#1a7a4a">1.00</td>
+          <td>1.41</td>
+          <td style="color:#a31515">-15.8%</td>
+          <td>0.36</td>
+          <td>54.0%</td>
+          <td style="font-size:11px">$191.7B</td>
+          <td>21.0x</td>
+          <td style="color:#1a7a4a">+21%</td>
+          <td>62%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+1.9%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-22</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Above SMA50 and SMA200 - strong uptrend<br>• Revenue growth 21% YoY - strong<br>• Consensus: BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">DE</strong><br>
+            <span style="font-size:10px;color:#aaa">Deere & Company</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Precision Agriculture / Autonomy</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Core</span></td>
+          <td style="font-weight:bold">$599.48</td>
+          <td style="color:#1a7a4a;font-weight:bold">+1.65%</td>
+          <td style="color:#a31515">-5.0%</td>
+          <td style="color:#1a7a4a">+6.0%</td>
+          <td style="color:#1a7a4a">+24.5%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+30.4%</td>
+          <td style="font-weight:bold;color:#555">49.6</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>£300</td>
+          <td style="color:#1a7a4a">£391.35</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£91.35</td>
+          <td>30.4%</td>
+          <td style="color:#555">0.81</td>
+          <td>1.30</td>
+          <td style="color:#a31515">-18.6%</td>
+          <td>0.74</td>
+          <td>50.4%</td>
+          <td style="font-size:11px">$161.9B</td>
+          <td>25.9x</td>
+          <td style="color:#1a7a4a">+13%</td>
+          <td>26%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+10.7%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-21</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Above SMA50 and SMA200 - strong uptrend<br>• Consensus: BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">IONQ</strong><br>
+            <span style="font-size:10px;color:#aaa">IonQ Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Quantum Computing</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Satellite</span></td>
+          <td style="font-weight:bold">$35.87</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.39%</td>
+          <td style="color:#a31515">-6.4%</td>
+          <td style="color:#1a7a4a">+17.9%</td>
+          <td style="color:#a31515">-34.5%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+55.2%</td>
+          <td style="font-weight:bold;color:#555">57.3</td>
+          <td><span style="color:#a31515;font-weight:700">Downtrend</span></td>
+          <td>£200</td>
+          <td style="color:#1a7a4a">£310.43</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£110.43</td>
+          <td>100.7%</td>
+          <td style="color:#555">0.31</td>
+          <td>-0.32</td>
+          <td style="color:#a31515">-62.9%</td>
+          <td>2.48</td>
+          <td>46.7%</td>
+          <td style="font-size:11px">$13.2B</td>
+          <td>-39.3x</td>
+          <td style="color:#1a7a4a">+428%</td>
+          <td>42%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+82.0%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-06</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Below both SMAs - downtrend in force<br>• Forward P/E attractive (-39.3x)<br>• Revenue growth 428% YoY - strong</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">CCJ</strong><br>
+            <span style="font-size:10px;color:#aaa">Cameco Corporation</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Uranium / Nuclear Renaissance</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Satellite</span></td>
+          <td style="font-weight:bold">$116.14</td>
+          <td style="color:#1a7a4a;font-weight:bold">+5.89%</td>
+          <td style="color:#a31515">-7.6%</td>
+          <td style="color:#1a7a4a">+6.3%</td>
+          <td style="color:#1a7a4a">+23.4%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+183.1%</td>
+          <td style="font-weight:bold;color:#555">53.1</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>£200</td>
+          <td style="color:#1a7a4a">£566.12</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£366.12</td>
+          <td>53.3%</td>
+          <td style="color:#1a7a4a">1.73</td>
+          <td>4.08</td>
+          <td style="color:#a31515">-27.2%</td>
+          <td>1.17</td>
+          <td>53.3%</td>
+          <td style="font-size:11px">$50.6B</td>
+          <td>61.7x</td>
+          <td style="color:#1a7a4a">+2%</td>
+          <td>36%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+9.0%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-05</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Above SMA50 and SMA200 - strong uptrend<br>• Forward P/E elevated (61.7x)<br>• Consensus: BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">AMD</strong><br>
+            <span style="font-size:10px;color:#aaa">Advanced Micro Devices</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">AI Accelerators / Data Center CPU</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Satellite</span></td>
+          <td style="font-weight:bold">$202.68</td>
+          <td style="color:#1a7a4a;font-weight:bold">+5.33%</td>
+          <td style="color:#1a7a4a">+2.0%</td>
+          <td style="color:#1a7a4a">+5.3%</td>
+          <td style="color:#a31515">-6.2%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+106.3%</td>
+          <td style="font-weight:bold;color:#555">49.8</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>£200</td>
+          <td style="color:#1a7a4a">£412.66</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£212.66</td>
+          <td>63.1%</td>
+          <td style="color:#1a7a4a">1.07</td>
+          <td>1.69</td>
+          <td style="color:#a31515">-34.5%</td>
+          <td>2.12</td>
+          <td>52.9%</td>
+          <td style="font-size:11px">$330.5B</td>
+          <td>18.6x</td>
+          <td style="color:#1a7a4a">+34%</td>
+          <td>52%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+42.9%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-05</span></td>
+          <td><span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• MACD bullish crossover<br>• Golden cross in effect<br>• Revenue growth 34% YoY - strong</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">PLTR</strong><br>
+            <span style="font-size:10px;color:#aaa">Palantir Technologies</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">AI Analytics / Government Platform</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Satellite</span></td>
+          <td style="font-weight:bold">$156.43</td>
+          <td style="color:#a31515;font-weight:bold">-0.46%</td>
+          <td style="color:#1a7a4a">+7.8%</td>
+          <td style="color:#1a7a4a">+20.3%</td>
+          <td style="color:#a31515">-12.1%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+87.5%</td>
+          <td style="font-weight:bold;color:#a31515">79.5</td>
+          <td><span style="color:#a31515;font-weight:700">Downtrend</span></td>
+          <td>£150</td>
+          <td style="color:#1a7a4a">£281.28</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£131.28</td>
+          <td>66.2%</td>
+          <td style="color:#1a7a4a">1.13</td>
+          <td>1.61</td>
+          <td style="color:#a31515">-40.6%</td>
+          <td>1.96</td>
+          <td>54.7%</td>
+          <td style="font-size:11px">$374.1B</td>
+          <td>84.6x</td>
+          <td style="color:#1a7a4a">+70%</td>
+          <td>82%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+19.2%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-04</span></td>
+          <td><span style="background:#e8a020;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">REDUCE</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• RSI overbought (79) - consider trimming<br>• Near Bollinger upper band<br>• Below both SMAs - downtrend in force</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">SHY</strong><br>
+            <span style="font-size:10px;color:#aaa">iShares 1-3yr Treasury</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Short Duration US Treasuries</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">FixedIncome</span></td>
+          <td style="font-weight:bold">$82.77</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.05%</td>
+          <td style="color:#a31515">-0.1%</td>
+          <td style="color:#1a7a4a">+0.2%</td>
+          <td style="color:#1a7a4a">+0.5%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+3.9%</td>
+          <td style="font-weight:bold;color:#555">47.1</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>£400</td>
+          <td style="color:#1a7a4a">£415.76</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£15.76</td>
+          <td>1.4%</td>
+          <td style="color:#555">0.04</td>
+          <td>0.16</td>
+          <td style="color:#a31515">-0.7%</td>
+          <td>-0.01</td>
+          <td>55.8%</td>
+          <td style="font-size:11px">$17.3B</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td style="color:#888">0%</td>
+          <td>0%</td>
+          <td style="color:#888;font-size:11px">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>N/A</td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Above SMA50 and SMA200 - strong uptrend</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">IGLT.L</strong><br>
+            <span style="font-size:10px;color:#aaa">iShares UK Gilts</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">UK Government Bonds</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">FixedIncome</span></td>
+          <td style="font-weight:bold">$9.92</td>
+          <td style="color:#a31515;font-weight:bold">-0.03%</td>
+          <td style="color:#a31515">-1.8%</td>
+          <td style="color:#a31515">0.0%</td>
+          <td style="color:#1a7a4a">+0.1%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+3.6%</td>
+          <td style="font-weight:bold;color:#555">36.8</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>£350</td>
+          <td style="color:#1a7a4a">£362.51</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£12.51</td>
+          <td>6.4%</td>
+          <td style="color:#a31515">-0.12</td>
+          <td>-0.20</td>
+          <td style="color:#a31515">-3.7%</td>
+          <td>-0.07</td>
+          <td>51.4%</td>
+          <td style="font-size:11px">N/A</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td style="color:#888">0%</td>
+          <td>0%</td>
+          <td style="color:#888;font-size:11px">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>N/A</td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Near Bollinger lower band - mean reversion<br>• Golden cross in effect</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">IAU</strong><br>
+            <span style="font-size:10px;color:#aaa">iShares Gold Trust</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Gold / Inflation Hedge</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Commodities</span></td>
+          <td style="font-weight:bold">$96.78</td>
+          <td style="color:#a31515;font-weight:bold">-0.21%</td>
+          <td style="color:#a31515">-3.6%</td>
+          <td style="color:#1a7a4a">+6.9%</td>
+          <td style="color:#1a7a4a">+22.1%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+77.3%</td>
+          <td style="font-weight:bold;color:#555">62.6</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>£300</td>
+          <td style="color:#1a7a4a">£532.05</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£232.05</td>
+          <td>25.1%</td>
+          <td style="color:#1a7a4a">2.15</td>
+          <td>3.18</td>
+          <td style="color:#a31515">-13.8%</td>
+          <td>0.04</td>
+          <td>59.5%</td>
+          <td style="font-size:11px">$93.9B</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td style="color:#888">0%</td>
+          <td>0%</td>
+          <td style="color:#888;font-size:11px">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>N/A</td>
+          <td><span style="background:#555555;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">HOLD</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Above SMA50 and SMA200 - strong uptrend</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">PHAG.L</strong><br>
+            <span style="font-size:10px;color:#aaa">WisdomTree Silver</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Silver / Industrial Demand</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Commodities</span></td>
+          <td style="font-weight:bold">$76.99</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.38%</td>
+          <td style="color:#a31515">-3.6%</td>
+          <td style="color:#1a7a4a">+11.6%</td>
+          <td style="color:#1a7a4a">+44.8%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+165.1%</td>
+          <td style="font-weight:bold;color:#555">62.6</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>£100</td>
+          <td style="color:#1a7a4a">£265.05</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£165.05</td>
+          <td>49.5%</td>
+          <td style="color:#1a7a4a">1.96</td>
+          <td>3.21</td>
+          <td style="color:#a31515">-35.3%</td>
+          <td>0.33</td>
+          <td>58.1%</td>
+          <td style="font-size:11px">N/A</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td style="color:#888">0%</td>
+          <td>0%</td>
+          <td style="color:#888;font-size:11px">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>N/A</td>
+          <td><span style="background:#555555;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">HOLD</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">SPUT</strong><br>
+            <span style="font-size:10px;color:#aaa">Sprott Uranium Trust</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Physical Uranium</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Commodities</span></td>
+          <td style="font-weight:bold">$27.06</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.43%</td>
+          <td style="color:#a31515">-0.5%</td>
+          <td style="color:#1a7a4a">+1.1%</td>
+          <td style="color:#a31515">-0.0%</td>
+          <td style="color:#1a7a4a;font-weight:bold">+12.8%</td>
+          <td style="font-weight:bold;color:#555">54.9</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>£100</td>
+          <td style="color:#1a7a4a">£112.84</td>
+          <td style="color:#1a7a4a;font-weight:bold">+£12.84</td>
+          <td>11.8%</td>
+          <td style="color:#555">0.74</td>
+          <td>0.72</td>
+          <td style="color:#a31515">-10.6%</td>
+          <td>0.56</td>
+          <td>61.0%</td>
+          <td style="font-size:11px">N/A</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td style="color:#888">0%</td>
+          <td>0%</td>
+          <td style="color:#888;font-size:11px">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>N/A</td>
+          <td><span style="background:#555555;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">HOLD</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect</td>
+        </tr></tbody>
+</table></div></div>
+
+<h2>Watchlist - All Names Tracked Daily</h2>
+<p style="color:#888;margin-bottom:8px;font-size:11px">BUY or STRONG BUY on any watchlist name triggers an entry review. All metrics identical to held positions.</p>
+<div class="card"><div class="tw"><table>
+  <thead><tr><th>Ticker</th><th>Sleeve</th><th>Price</th><th>Day</th>
+            <th>1W</th><th>1M</th><th>3M</th><th>1Y Sim</th>
+            <th>RSI</th><th>Trend</th>
+            <th>Alloc</th><th>Sim Value</th><th>Gain/Loss</th>
+            <th>Vol</th><th>Sharpe</th><th>Sortino</th><th>Max DD</th><th>Beta</th><th>Win%</th>
+            <th>Mkt Cap</th><th>Fwd P/E</th><th>Rev Grth</th><th>Gross Mgn</th>
+            <th>Analyst</th><th>Upside</th><th>Next Earn</th>
+            <th>Signal</th><th>Key Drivers</th></tr></thead>
+  <tbody><tr>
+          <td><strong style="color:#0d2b55">ARM</strong><br>
+            <span style="font-size:10px;color:#aaa">ARM Holdings plc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Chip IP Royalties / Architecture</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$117.63</td>
+          <td style="color:#1a7a4a;font-weight:bold">+2.84%</td>
+          <td style="color:#a31515">-5.4%</td>
+          <td style="color:#1a7a4a">+6.1%</td>
+          <td style="color:#a31515">-16.3%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">37.5</td>
+          <td><span style="color:#e8a020">Mixed</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>57.0%</td>
+          <td style="color:#a31515">-0.25</td>
+          <td>-0.76</td>
+          <td style="color:#a31515">-50.5%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>48.5%</td>
+          <td style="font-size:11px">$124.9B</td>
+          <td>55.0x</td>
+          <td style="color:#1a7a4a">+26%</td>
+          <td>97%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+26.2%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-06</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Near Bollinger lower band - mean reversion<br>• Revenue growth 26% YoY - strong<br>• Consensus: BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">CRWD</strong><br>
+            <span style="font-size:10px;color:#aaa">CrowdStrike Holdings</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">AI-Native Cybersecurity</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$434.13</td>
+          <td style="color:#1a7a4a;font-weight:bold">+1.20%</td>
+          <td style="color:#1a7a4a">+12.8%</td>
+          <td style="color:#1a7a4a">+15.1%</td>
+          <td style="color:#a31515">-15.4%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">55.5</td>
+          <td><span style="color:#e8a020">Mixed</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>47.2%</td>
+          <td style="color:#555">0.31</td>
+          <td>0.13</td>
+          <td style="color:#a31515">-37.2%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>51.8%</td>
+          <td style="font-size:11px">$110.1B</td>
+          <td>70.3x</td>
+          <td style="color:#1a7a4a">+23%</td>
+          <td>75%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+13.8%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-06-09</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Forward P/E elevated (70.3x)<br>• Revenue growth 23% YoY - strong<br>• Consensus: BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">ISRG</strong><br>
+            <span style="font-size:10px;color:#aaa">Intuitive Surgical</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Surgical Robotics</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$493.56</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.69%</td>
+          <td style="color:#a31515">-0.5%</td>
+          <td style="color:#1a7a4a">+3.6%</td>
+          <td style="color:#a31515">-13.2%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">50.1</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>34.6%</td>
+          <td style="color:#a31515">-0.38</td>
+          <td>-0.77</td>
+          <td style="color:#a31515">-29.4%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>49.3%</td>
+          <td style="font-size:11px">$175.3B</td>
+          <td>43.1x</td>
+          <td style="color:#1a7a4a">+19%</td>
+          <td>66%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+23.6%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-21</span></td>
+          <td><span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect<br>• Consensus: BUY<br>• Analyst target +24% upside</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">CRSP</strong><br>
+            <span style="font-size:10px;color:#aaa">CRISPR Therapeutics</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Gene Editing / Precision Medicine</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$58.78</td>
+          <td style="color:#1a7a4a;font-weight:bold">+4.04%</td>
+          <td style="color:#a31515">-3.3%</td>
+          <td style="color:#1a7a4a">+28.1%</td>
+          <td style="color:#1a7a4a">+1.0%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">60.5</td>
+          <td><span style="color:#e8a020">Mixed</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>64.3%</td>
+          <td style="color:#555">0.80</td>
+          <td>1.13</td>
+          <td style="color:#a31515">-41.0%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>48.5%</td>
+          <td style="font-size:11px">$5.6B</td>
+          <td>-14.0x</td>
+          <td style="color:#a31515">-98%</td>
+          <td>0%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+44.2%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-11</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Forward P/E attractive (-14.0x)<br>• Revenue declining -98% YoY<br>• Consensus: BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">AVGO</strong><br>
+            <span style="font-size:10px;color:#aaa">Broadcom Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Custom AI ASICs / Enterprise Software</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$345.75</td>
+          <td style="color:#1a7a4a;font-weight:bold">+4.62%</td>
+          <td style="color:#1a7a4a">+8.4%</td>
+          <td style="color:#1a7a4a">+11.3%</td>
+          <td style="color:#a31515">-9.1%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">59.2</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>49.7%</td>
+          <td style="color:#1a7a4a">1.03</td>
+          <td>1.55</td>
+          <td style="color:#a31515">-37.9%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>54.4%</td>
+          <td style="font-size:11px">$1.64T</td>
+          <td>20.0x</td>
+          <td style="color:#1a7a4a">+16%</td>
+          <td>77%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+35.3%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-06-03</span></td>
+          <td><span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Near Bollinger upper band<br>• Above SMA50 and SMA200 - strong uptrend<br>• Volume spike (1.6x avg)</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">MRVL</strong><br>
+            <span style="font-size:10px;color:#aaa">Marvell Technology</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Custom AI Silicon / Optical</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$92.65</td>
+          <td style="color:#1a7a4a;font-weight:bold">+3.44%</td>
+          <td style="color:#1a7a4a">+14.6%</td>
+          <td style="color:#1a7a4a">+24.9%</td>
+          <td style="color:#a31515">-5.6%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#a31515">70.2</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>66.1%</td>
+          <td style="color:#a31515">-0.01</td>
+          <td>-0.43</td>
+          <td style="color:#a31515">-58.5%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>49.6%</td>
+          <td style="font-size:11px">$80.9B</td>
+          <td>17.2x</td>
+          <td style="color:#1a7a4a">+22%</td>
+          <td>52%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+29.4%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-28</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• RSI overbought (70) - consider trimming<br>• Near Bollinger upper band<br>• Above SMA50 and SMA200 - strong uptrend</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">AMZN</strong><br>
+            <span style="font-size:10px;color:#aaa">Amazon.com Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">AWS Cloud / AI / Logistics</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$213.49</td>
+          <td style="color:#1a7a4a;font-weight:bold">+0.13%</td>
+          <td style="color:#1a7a4a">+2.5%</td>
+          <td style="color:#a31515">-4.1%</td>
+          <td style="color:#a31515">-6.8%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">64.6</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>34.8%</td>
+          <td style="color:#a31515">-0.23</td>
+          <td>-0.58</td>
+          <td style="color:#a31515">-30.9%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>52.2%</td>
+          <td style="font-size:11px">$2.29T</td>
+          <td>22.9x</td>
+          <td style="color:#1a7a4a">+14%</td>
+          <td>50%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+31.4%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-04-30</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect<br>• Consensus: STRONG BUY<br>• Analyst target +31% upside</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">ALAB</strong><br>
+            <span style="font-size:10px;color:#aaa">Astera Labs Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">AI Data Centre Connectivity</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$122.31</td>
+          <td style="color:#1a7a4a;font-weight:bold">+2.61%</td>
+          <td style="color:#1a7a4a">+1.5%</td>
+          <td style="color:#a31515">-14.4%</td>
+          <td style="color:#a31515">-19.8%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">48.6</td>
+          <td><span style="color:#a31515;font-weight:700">Downtrend</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>91.0%</td>
+          <td style="color:#555">0.62</td>
+          <td>0.31</td>
+          <td style="color:#a31515">-56.4%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>51.5%</td>
+          <td style="font-size:11px">$20.8B</td>
+          <td>34.7x</td>
+          <td style="color:#1a7a4a">+92%</td>
+          <td>76%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+69.0%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-05</span></td>
+          <td><span style="background:#1a7a4a;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">STRONG BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• MACD bullish crossover<br>• Below both SMAs - downtrend in force<br>• Revenue growth 92% YoY - strong</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">NVDA</strong><br>
+            <span style="font-size:10px;color:#aaa">NVIDIA Corporation</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">AI Infrastructure (re-entry monitor)</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$182.65</td>
+          <td style="color:#1a7a4a;font-weight:bold">+2.72%</td>
+          <td style="color:#1a7a4a">+0.1%</td>
+          <td style="color:#1a7a4a">+6.3%</td>
+          <td style="color:#a31515">-0.4%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">47.7</td>
+          <td><span style="color:#2e6ba8">Golden X</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>44.2%</td>
+          <td style="color:#1a7a4a">1.05</td>
+          <td>1.55</td>
+          <td style="color:#a31515">-32.7%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>54.0%</td>
+          <td style="font-size:11px">$4.44T</td>
+          <td>16.9x</td>
+          <td style="color:#1a7a4a">+73%</td>
+          <td>71%</td>
+          <td style="color:#1a7a4a;font-size:11px">STRONG BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+45.8%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-20</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• Golden cross in effect<br>• Revenue growth 73% YoY - strong<br>• Consensus: STRONG BUY</td>
+        </tr><tr>
+          <td><strong style="color:#0d2b55">ABBV</strong><br>
+            <span style="font-size:10px;color:#aaa">AbbVie Inc</span><br>
+            <span style="font-size:9px;color:#ccc;font-style:italic">Immunology / Oncology Pipeline</span></td>
+          <td><span style="font-size:10px;background:#e8f0f8;padding:1px 6px;border-radius:4px;color:#2e6ba8">Watchlist</span></td>
+          <td style="font-weight:bold">$227.45</td>
+          <td style="color:#a31515;font-weight:bold">-1.16%</td>
+          <td style="color:#a31515">-2.9%</td>
+          <td style="color:#1a7a4a">+3.9%</td>
+          <td style="color:#1a7a4a">+0.2%</td>
+          <td style="color:#888;font-weight:bold"><span style='color:#aaa'>N/A</span></td>
+          <td style="font-weight:bold;color:#555">43.1</td>
+          <td><span style="color:#1a7a4a;font-weight:700">Uptrend</span></td>
+          <td>N/A</td>
+          <td style="color:#888">N/A</td>
+          <td style="color:#888;font-weight:bold">N/A</td>
+          <td>26.0%</td>
+          <td style="color:#555">0.72</td>
+          <td>0.85</td>
+          <td style="color:#a31515">-20.7%</td>
+          <td><span style='color:#aaa'>N/A</span></td>
+          <td>52.9%</td>
+          <td style="font-size:11px">$402.2B</td>
+          <td>14.1x</td>
+          <td style="color:#1a7a4a">+10%</td>
+          <td>72%</td>
+          <td style="color:#1a7a4a;font-size:11px">BUY</td>
+          <td style="color:#1a7a4a;font-weight:bold">+9.4%</td>
+          <td><span style="color:#e8a020;font-weight:600">2026-05-01</span></td>
+          <td><span style="background:#2e6ba8;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;white-space:nowrap">BUY</span></td>
+          <td style="font-size:11px;color:#555;max-width:200px">• MACD bearish crossover<br>• Above SMA50 and SMA200 - strong uptrend<br>• Forward P/E attractive (14.1x)</td>
+        </tr></tbody>
+</table></div></div>
+
+<h2>Upcoming Earnings Calendar</h2>
+<div class="card"><div class="tw"><table>
+  <thead><tr><th>Ticker</th><th>Company</th><th>Next Earnings</th><th>Status</th></tr></thead>
+  <tbody><tr><td><strong>ABBV</strong></td><td>AbbVie Inc</td><td style="color:#e8a020;font-weight:bold">2026-05-01</td><td>Watchlist</td></tr><tr><td><strong>ALAB</strong></td><td>Astera Labs Inc</td><td style="color:#e8a020;font-weight:bold">2026-05-05</td><td>Watchlist</td></tr><tr><td><strong>AMD</strong></td><td>Advanced Micro Devices</td><td style="color:#e8a020;font-weight:bold">2026-05-05</td><td>Held</td></tr><tr><td><strong>AMZN</strong></td><td>Amazon.com Inc</td><td style="color:#e8a020;font-weight:bold">2026-04-30</td><td>Watchlist</td></tr><tr><td><strong>ARM</strong></td><td>ARM Holdings plc</td><td style="color:#e8a020;font-weight:bold">2026-05-06</td><td>Watchlist</td></tr><tr><td><strong>ASML</strong></td><td>ASML Holding NV</td><td style="color:#e8a020;font-weight:bold">2026-04-15</td><td>Held</td></tr><tr><td><strong>AVGO</strong></td><td>Broadcom Inc</td><td style="color:#e8a020;font-weight:bold">2026-06-03</td><td>Watchlist</td></tr><tr><td><strong>CCJ</strong></td><td>Cameco Corporation</td><td style="color:#e8a020;font-weight:bold">2026-05-05</td><td>Held</td></tr><tr><td><strong>CRSP</strong></td><td>CRISPR Therapeutics</td><td style="color:#e8a020;font-weight:bold">2026-05-11</td><td>Watchlist</td></tr><tr><td><strong>CRWD</strong></td><td>CrowdStrike Holdings</td><td style="color:#e8a020;font-weight:bold">2026-06-09</td><td>Watchlist</td></tr><tr><td><strong>DE</strong></td><td>Deere & Company</td><td style="color:#e8a020;font-weight:bold">2026-05-21</td><td>Held</td></tr><tr><td><strong>GOOG</strong></td><td>Alphabet Inc</td><td style="color:#e8a020;font-weight:bold">2026-04-23</td><td>Held</td></tr><tr><td><strong>IONQ</strong></td><td>IonQ Inc</td><td style="color:#e8a020;font-weight:bold">2026-05-06</td><td>Held</td></tr><tr><td><strong>ISRG</strong></td><td>Intuitive Surgical</td><td style="color:#e8a020;font-weight:bold">2026-04-21</td><td>Watchlist</td></tr><tr><td><strong>LLY</strong></td><td>Eli Lilly & Co</td><td style="color:#e8a020;font-weight:bold">2026-04-30</td><td>Held</td></tr><tr><td><strong>MRVL</strong></td><td>Marvell Technology</td><td style="color:#e8a020;font-weight:bold">2026-05-28</td><td>Watchlist</td></tr><tr><td><strong>MSFT</strong></td><td>Microsoft Corporation</td><td style="color:#e8a020;font-weight:bold">2026-04-29</td><td>Held</td></tr><tr><td><strong>NEE</strong></td><td>NextEra Energy Inc</td><td style="color:#e8a020;font-weight:bold">2026-04-22</td><td>Held</td></tr><tr><td><strong>NVDA</strong></td><td>NVIDIA Corporation</td><td style="color:#e8a020;font-weight:bold">2026-05-20</td><td>Watchlist</td></tr><tr><td><strong>PLTR</strong></td><td>Palantir Technologies</td><td style="color:#e8a020;font-weight:bold">2026-05-04</td><td>Held</td></tr><tr><td><strong>TSLA</strong></td><td>Tesla Inc</td><td style="color:#e8a020;font-weight:bold">2026-04-21</td><td>Held</td></tr><tr><td><strong>TSM</strong></td><td>TSMC ADR</td><td style="color:#e8a020;font-weight:bold">2026-04-16</td><td>Held</td></tr></tbody>
+</table></div></div>
+
+<h2>Interactive Brokers - Upgrade Path</h2>
+<div class="card"><div class="card-inner" style="line-height:1.8;color:#444">
+  Currently using <strong>Yahoo Finance</strong> (free, 15-min delayed). To upgrade to live real-time data via Interactive Brokers:<br>
+  <ol style="margin:10px 0 0 20px">
+    <li>Open an account at <strong>ibkr.co.uk</strong> (UK regulated)</li>
+    <li>Enable <strong>TWS API</strong> in IB Account Management</li>
+    <li>Install: <code>pip install ibapi</code></li>
+    <li>Run IB Gateway locally on port 7497</li>
+    <li>In this script, change: <code>DATA_PROVIDER = "yahoo"</code> to <code>DATA_PROVIDER = "ibkr"</code></li>
+    <li>Implement the three stub methods in the <code>InteractiveBrokersProvider</code> class</li>
+  </ol>
+  <p style="margin-top:10px">IBKR provides: live tick data, real-time P&L, actual position quantities, order execution, and institutional fundamentals via Reuters/Refinitiv.</p>
+</div></div>
+
+</div>
+<div class="footer">
+  MURDOCH CAPITAL &nbsp;|&nbsp; Cameron Murdoch Portfolio Management &nbsp;|&nbsp; 2026-03-10<br>
+  Simulated returns are hypothetical based on historical data. NOT regulated financial advice. Past performance does not guarantee future results.<br>
+  Analytics Engine v2.0 &nbsp;|&nbsp; Provider: YAHOO &nbsp;|&nbsp; Switch DATA_PROVIDER to "ibkr" for live data
+</div>
+</body></html>
